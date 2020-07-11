@@ -12,7 +12,7 @@ done
 
 install -m 755 out_linux/Debug/fcitx5-mozc.so "${PREFIX}/lib/fcitx5/"
 install -m 644 unix/fcitx5/mozc-addon.conf "${PREFIX}/share/fcitx5/addon/mozc.conf"
-install -m 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
+install -Dm 644 unix/fcitx5/mozc.conf "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
 sed -i "s|PREFIX|${PREFIX}|g" "${PREFIX}/share/fcitx5/inputmethod/mozc.conf"
 
 install -d "${PREFIX}/share/fcitx5/mozc/icon"
